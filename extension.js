@@ -6,7 +6,6 @@ let stockCodes = [];
 let updateInterval = 10000;
 let timer = null;
 let showTimer = null;
-
 function activate(context) {
 	init();
 	context.subscriptions.push(
@@ -103,7 +102,7 @@ function isShowTime() {
 
 function getItemText(item) {
 	return `「${item.name}」${keepDecimal(item.price, calcFixedNumber(item))} ${
-		item.percent >= 0 ? '📈' : '📉'
+		item.percent >= 0 ? '/\\' : '\\/'
 	} ${keepDecimal(item.percent * 100, 2)}%`;
 }
 
