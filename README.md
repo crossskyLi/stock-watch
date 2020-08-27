@@ -5,6 +5,8 @@ VScode 插件 | A 股 | 港股 | 实时股票数据
 好好工作，股票涨停！
 GitHub: https://github.com/TDGarden/stock-watch 欢迎 PR、star
 
+生成离线包
+vsce package  
 ## Configuration
 
 修改用户配置，添加你所需要监控的股票代码
