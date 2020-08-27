@@ -125,7 +125,7 @@ function getItemText(item) {
 
 function getAdvPrice(arr) {
   let total = 0;
-  let j = 0
+  let j = 0;
   for (let i = 0; i < arr.length; i++) {
     if (+arr[i] > 0) {
       total += parseFloat(parseFloat(arr[i]).toFixed(2));
@@ -209,6 +209,7 @@ function generatePriceLine(result, item) {
     stockMap[item].priceArr.push("\\");
   }
   if (result[item].price !== lastPrice) {
+    stockMap[item].priceArr = stockMap[item].priceArr.slice(0, 20);
     stockMap[item].priceArr.push(result[item].price);
   }
 }
